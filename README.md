@@ -1,6 +1,6 @@
 # Traditional
 - 1. run `01-find-spam.py`
-	- โปรแกรมนี้จะเอา folder ที่ cleaned ของเราไปเทียบกับ original dataset แล้วเอาสิ่งที่ไม่มีบน clean ไปใส่ folder spam ให้อัตโนมัติ (บน folder original)
+	- โปรแกรมนี้จะเอา folder ที่ cleaned ของเราไปเทียบกับ original dataset หลังจากนั้นจะเอา iamge ที่มีบน original แต่ไม่มีบน cleaned ไปใส่ folder spam ให้อัตโนมัติ (บน original dir)
 	- `CLEANED_PATH = "train_cleaned"`
 	- `ORIGINAL_PATH = "train"`
 - 2. หลังจากได้ class spam แล้ว
