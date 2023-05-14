@@ -28,6 +28,6 @@
 
 | วิธี | ผลที่ได้ |  notes |
 |---|---|---|
-| 0 dataset | ![clip-normal.png]()
+| 0. dataset | ![clip-normal.png](clip-normal.png) | % ปกติ ของ clip บน dataset |
 | 1. filter < 0.5 in dataset | ![/clip-filter-threshold.png](clip-filter-threshold.png) | ลองดูจำนวน ของ 1-best ที่น้อยกว่า 50% |
 | 2. ลองเอา spam ของ trdational มาเช็ค | ![/clip-k-best-1.png](clip-k-best-1.png)  | เปอร์เซ็นต์ไม่ได้แตกต่างจาก 2.1 อย่างมีนัยสำคัญทั้ง ๆ ที่เป็น spam vs non-spam (dataset) |
