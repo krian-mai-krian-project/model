@@ -8,5 +8,9 @@ We use this model and thresholding to determine the spam image (Image that is no
 
 `find_thresholds.ipynb` => thresholding code to find best thresholds for each class.
 
+# API
+
+API for classification located in folder `api`. Use `docker build` and `docker run` to run the API in docker environment.
+
 
 
