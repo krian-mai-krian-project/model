@@ -6,13 +6,15 @@ from transformers import CLIPModel,CLIPProcessor
 from typing import Optional
 import torchvision.transforms as transforms
 import uvicorn
+from utils import THRESHOLDS, download_weight
 import pickle
 from PIL import Image
 import requests
 
-MODEL_NAME = "laion/CLIP-ViT-H-14-laion2B-s32B-b79K"
-CLASSIFIER_FILENAME = "model.sav"
-THRESHOLDS = [5.06, 3.96, 5.38, 4.74, 4.31, 5.31, 4.98]
+MODEL_NAME = "clip-laion"
+CLASSIFIER_FILENAME = "lr-weight/model.sav"
+
+download_weight()
 app = FastAPI()
 
 class CLIPSolution:
@@ -54,7 +56,6 @@ class CLIPSolution:
 
 processor = CLIPSolution()
 
-
 class URL(BaseModel):
     url: str
     url_list: Optional[list]
@@ -80,5 +81,5 @@ def read_item(body: URL):
         content={"success": False, "details": "Error Occured"})
 
 
-# if __name__ == "__main__":
-#     uvicorn.run(app, host="0.0.0.0", port=8789)
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8789)
