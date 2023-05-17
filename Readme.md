@@ -10,7 +10,6 @@ We use this model and thresholding to determine the spam image (Image that is no
 
 # API
 
-API for classification located in folder `api`. Use `docker build` and `docker run` to run the API in docker environment.
-
+API for classification located in folder `api`. Use `docker build -t datasciapi:v2 .` and `docker run -d -p 8789:8789 datasciapi:v2  ` to run the API in docker environment.
 
 
